@@ -43,9 +43,12 @@
 }
 
 :root {
-  --font-sans: Adamina, ui-serif, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   --font-serif: Adamina, ui-serif, serif;
-  --font-mono: Fira Code, ui-monospace, monospace;
+  --font-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 body {
