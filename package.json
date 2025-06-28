@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tinacms build && next build",
-    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev --turbo\"",
+    "dev": "next dev",
+    "dev:tina": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev --turbo\"",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
     "prepare": "husky install"
