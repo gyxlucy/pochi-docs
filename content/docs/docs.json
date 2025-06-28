@@ -79,25 +79,13 @@
     "primary": {
       "type": "button",
       "label": "Get Started",
-      "href": "/quick-start"
+      "href": "https://docs.getpochi.com/quick-start"
     }
   },
   "footer": {
     "socials": {
       "discord": "https://discord.com/invite/tWF66yr8NQ",
       "github": "https://github.com/pochi-ai"
-    }
-  },
-  "api": {
-    "baseUrl": "https://api.pochi.ai",
-    "auth": {
-      "method": "bearer"
-    }
-  },
-  "openapi": "/api/openapi.json",
-  "analytics": {
-    "gtag": {
-      "measurementId": "G-XXXXXXXXXX"
     }
   },
   "seo": {
@@ -108,8 +96,5 @@
       "source": "/docs",
       "destination": "/index"
     }
-  ],
-  "integrations": {
-    "intercom": "your_intercom_app_id"
-  }
+  ]
 }
