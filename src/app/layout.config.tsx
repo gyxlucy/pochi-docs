@@ -1,6 +1,7 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
-import logo from "../../public/logo512.png"
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { HomeIcon } from "lucide-react";
+import Image from "next/image";
+import logo from "../../public/logo512.png";
 /**
  * Shared layout configurations
  *
@@ -12,13 +13,7 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-      <Image
-      src={logo}
-      alt="Pochi Logo"
-      width={24}
-      height={24}
-      />
-    
+        <Image src={logo} alt="Pochi Logo" width={24} height={24} />
         Pochi Document
       </>
     ),
@@ -26,10 +21,11 @@ export const baseOptions: BaseLayoutProps = {
   // see https://fumadocs.dev/docs/ui/navigation/links
   links: [
     {
-      label: 'Main Site',
-      text: 'Main Site',
-      url: 'https://www.getpochi.com',
-      external: true
-    }
+      label: "Main Site",
+      text: "Main Site",
+      url: "https://www.getpochi.com",
+      external: true,
+      icon: <HomeIcon className="w-4 h-4" />,
+    },
   ],
 };
