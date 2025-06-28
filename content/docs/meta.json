@@ -1,7 +1,24 @@
 {
+  "title": "Pochi Documentation",
+  "description": "Complete guide to using Pochi",
+  "root": true,
   "pages": [
+    "---Introduction---",
     "index",
-    "core-features",
-    "account-support"
+    "what-is-pochi",
+    "quick-start",
+    "---Core Features---",
+    "tasks",
+    "auto-approve",
+    "advanced-settings",
+    "todo-list",
+    "rules",
+    "workflows",
+    "tools-integrations",
+    "mcp",
+    "---Account&Support---",
+    "usage",
+    "privacy",
+    "community-support"
   ]
 }

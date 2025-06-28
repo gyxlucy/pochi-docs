@@ -1,0 +1,114 @@
+---
+title: MCP
+description: Model Context Protocol integration and configuration
+---
+
+# **MCP**
+
+Model Context Protocol (MCP) extends Pochi's capabilities by enabling secure integration with external services, databases, and APIs directly within your development workflow.
+
+## **What is MCP**
+
+Model Context Protocol is an open protocol that standardizes how applications provide context to LLMs. Think of MCP like a USB-C port for AI applications; it provides a standardized way to connect AI models to different data sources and tools.
+
+MCP servers act as intermediaries between Pochi and external tools or data sources. They are small programs that expose functionalities to Pochi, enabling it to interact with the outside world through the MCP.
+
+**Key Concepts**
+
+MCP servers define a set of "tools," which are functions Pochi can execute. These tools offer a wide range of capabilities.
+
+Here's how MCP works:
+
+- MCP hosts discover the capabilities of connected servers and load their tools, prompts, and resources
+- Resources provide consistent access to read-only data, akin to file paths or database queries
+- Security is ensured as servers isolate credentials and sensitive data. Interactions require explicit user approval
+
+**Use Cases**
+
+Here are some concrete examples of how MCP servers can be used:
+
+**Database Operations:**
+
+- Generate weekly sales reports
+- Analyze customer behavior patterns
+- Create real-time dashboards for business metrics
+
+**API Testing and Integration:**
+
+- Monitor API endpoints for response times
+- Validate endpoint functionality
+- Generate TypeScript interfaces from API responses
+
+**Cloud Service Management:**
+
+- Deploy applications to cloud platforms
+- Configure environment variables
+- Set up monitoring and alerts
+
+## **Config MCP Server in Pochi**
+
+Setting up MCP servers in Pochi allows you to connect external services to your development workflow.
+
+**Accessing MCP Configuration:**
+
+1. Click the "MCP Servers" icon in Pochi's interface
+2. Select "Add New Server" to configure a new integration
+3. Choose from pre-built servers or add custom configurations
+
+**Configuration Options:**
+
+**Database Connections:**
+
+```json
+{
+  "name": "postgres-database",
+  "type": "database",
+  "config": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "development",
+    "user": "developer"
+  },
+  "autoApprove": ["read_tables", "describe_schema"]
+}
+```
+
+**API Services:**
+
+```json
+{
+  "name": "github-integration",
+  "type": "github",
+  "config": {
+    "token": "ghp_your_token_here",
+    "repositories": ["your-org/your-repo"]
+  },
+  "autoApprove": ["read_files", "list_issues"]
+}
+```
+
+**Server Management:**
+
+- **Enable/Disable Servers**: Toggle servers on/off based on project needs
+- **Permission Controls**: Set auto-approve permissions for different operation types
+- **Monitoring and Logs**: View real-time activity and connection health
+- **Security Best Practices**: Use environment variables for credentials and implement least-privilege access
+
+**Getting Started**
+
+Pochi does not come with any pre-installed MCP servers. You'll need to find and install them separately.
+
+Choose the right approach for your needs:
+
+- **Ask Pochi**: You can ask Pochi to help you find or create MCP servers
+- **Build Your Own**: Create custom MCP servers using the MCP SDK
+- **Community Repositories**: Check for community-maintained lists of MCP servers
+
+**Security Considerations**
+
+When working with MCP servers, it's important to follow security best practices:
+
+- **Authentication**: Always use secure authentication methods for API access
+- **Environment Variables**: Store sensitive information in environment variables
+- **Access Control**: Limit server access to authorized users only
+- **Data Validation**: Validate all inputs to prevent injection attacks
