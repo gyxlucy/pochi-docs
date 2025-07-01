@@ -5,8 +5,7 @@
   "pages": [
     "---Introduction---",
     "index",
-    "what-is-pochi",
-    "quick-start",
+    "installation",
     "---Core Features---",
     "tasks",
     "auto-approve",
